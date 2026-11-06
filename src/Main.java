@@ -2,15 +2,13 @@ import java.util.List;
 
 public class Main {
 
-    public String name;
+    public static void main(String[] args) {
+        // Create a new Recipe object
+        Recipe recipe = new Recipe("Pancakes", 4, List.of("Flour", "Eggs", "Milk", "Sugar", "Baking Powder"));
 
-    public int servings;
-
-    public List<String> ingredients;
-
-    public Main(String name, int servings, List<String> ingredients) {
-        this.name = name;
-        this.servings = servings;
-        this.ingredients = ingredients;
+        // Print the recipe details
+        System.out.println("Recipe Name: " + recipe.name);
+        System.out.println("Servings: " + recipe.servings);
+        System.out.println("Ingredients: " + String.join(", ", recipe.ingredients));
     }
 }
